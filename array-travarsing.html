@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let data = [2, 4, 1, 5, 8, 6, 7, 9, 3];
+    // for (i = 0; i < data.length; i++) {
+    // document.write(`${data[i]} `)
+    // console.log(data[i]);
+    // }
+    // console.log(data[3]);
+
+    function getElement() {
+      let inputEl = document.getElementById("element").value;
+      if (inputEl < data.length) {
+        alert(data[inputEl]);
+      } else {
+        alert("Please enter valid input");
+      }
+    }
+
+  </script>
+</head>
+
+<body>
+  <input type="text" id="element" />
+  <button onClick="getElement()">Get Element</button>
+</body>
+
+</html>
