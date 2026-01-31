@@ -8,8 +8,8 @@
 
     function insertElement() {
       let data = [60, 30, 10, 67, 40];
-      let newEl = document.getElementById('newElement').value;
-      let position = document.getElementById('position').value;
+      let newEl = Number(document.getElementById('newElement').value);
+      let position = Number(document.getElementById('position').value);
       for (i = data.length; i > position; i--) {
         data[i] = data[i - 1]
         console.log("now ", i)

@@ -1,0 +1,31 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let array = [10, 20, 30, 12, 19, 92]
+    console.log(array);
+    function deleteElement() {
+      let array = [10, 20, 30, 12, 19, 92]
+      console.log(array)
+      const position = parseInt(document.getElementById('position').value);
+      for (i = position; i < array.length - 1; i++) {
+        array[i] = array[i + 1]
+        console.log(i)
+      }
+      array.pop()
+      console.log(array)
+    }
+    array.splice(3, 1)
+    console.log(array);
+  </script>
+</head>
+
+<body>
+  <input type="text" placeholder="Insert position to delete" id="position" />
+  <button onClick="deleteElement()">Delete</button>
+</body>
+
+</html>

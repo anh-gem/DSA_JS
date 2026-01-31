@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function SearchItem() {
+      let array = [20, 30, 10, 5, 50, 100];
+      console.log(array);
+      let flag = 0;
+      let index = null;
+      const item = parseInt(document.getElementById('searchElement').value);
+      for (i = 0; i < array.length; i++) {
+        if (array[i] == item) {
+          flag = 1;
+          index = i;
+          break;
+        }
+      }
+      if (flag == 1) {
+        // console.log("found in the position ", index) 
+        console.log(`Value found in the position ${array.indexOf(item)}`)
+      }
+      else { console.log("Not Found") }
+    }
+  </script>
+</head>
+
+<body>
+  <input type="text" placeholder="Enter number to search" id="searchElement" />
+  <button onClick="SearchItem()">Search</button>
+</body>
+
+</html>
