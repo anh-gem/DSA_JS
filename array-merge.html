@@ -1,0 +1,42 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let array1 = [20, 30, 10, 5, 50, 100];
+    let array2 = [21, 31, 11, 6, 51, 101];
+    let initialLength = array1.length
+    let j = 0;
+
+    for (let i = initialLength; i < (initialLength + array2.length); i++) {
+      array1[i] = array2[j];
+      j++;
+    }
+    for (let i = 0; i < array1.length; i++) {
+      for (let k = i + 1; k < array1.length; k++) {
+        if (array1[i] > array1[k]) {
+          array1[i] = array1[i] + array1[k];
+          array1[k] = array1[i] - array1[k];
+          array1[i] = array1[i] - array1[k];
+        }
+      }
+    }
+    // console.log(array1)
+    // while (i < (initialLength + array2.length)) {
+    //   array1[i] = array2[j];
+    //   j++;
+    //   i++
+    // }
+    console.log(array1)
+    //array1.reverse()
+    //array3= [...array1,...arrar2]
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
